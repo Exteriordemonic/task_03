@@ -1,0 +1,18 @@
+.ui-slider-handle {
+    background: $gold;
+    border-radius: 5rem;
+    // transform: translateY(2px);
+}
+
+.ui-slider-handle:focus {
+    outline: none;
+}
+
+.ui-slider {
+    background: $gray2;
+    height: 0.5rem;
+}
+
+.ui-slider-range {
+    background: $gold;
+}

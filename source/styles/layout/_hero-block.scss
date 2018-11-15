@@ -1,0 +1,44 @@
+.hero-block {
+	background: url('../images/inwestycja_banner.png') no-repeat;
+	background-size: cover;
+	background-color: $black;
+	height: 427px;
+	display: flex;
+	position: relative;
+	.buttons {
+		padding-top: 237px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		&__item {
+			border-radius: 25px;
+			max-width: 345px;
+			width: 30%;
+			cursor: pointer;
+			height: 50px;
+			 
+			&__link {
+				color: $white;	
+			}			
+			&--border {
+				border: 1px solid $gold;
+				background-color: transparent;
+				padding: 16px 50px;
+				&:hover {
+					background-color: $gold;
+					border: none;
+				}
+			}
+			&--gold {
+				background-color: $gold;
+				border: none;
+				padding: 16px 40px;
+				&:hover {
+					background-color: transparent;
+					border: 1px solid $gold;
+				}
+			}
+		}
+	}
+}

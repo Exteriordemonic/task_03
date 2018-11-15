@@ -1,0 +1,17 @@
+.container {
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+	
+	@include respond-to('large') {
+		max-width: 1440px;
+	}
+
+	@include respond-to('medium') {
+		max-width: 1000px;
+	}
+
+	@include respond-to('small') {
+		max-width: 999px;
+	}
+}

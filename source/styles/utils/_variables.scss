@@ -1,0 +1,17 @@
+$darkblue: #414142;
+$gold: #dab806;
+$white: #ffffff;
+$grey1: #9b9b9b;
+$grey2: #ededed;
+$green: #00b734;
+$grey3: #dfdfdf;
+$grey4: #b2b2b2;
+$red: #ff0000;
+$grey5: #f8f8f8;
+$black: #222222;
+
+$breakpoints: (
+  'small':  ( min-width:  999px ),
+  'medium': ( min-width:  1200px ),
+  'large':  ( min-width: 1440px )
+) !default;

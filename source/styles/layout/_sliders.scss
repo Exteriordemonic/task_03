@@ -4,10 +4,7 @@
 
 .search__title {
     color: $primary-color;
-    font-size: 2rem;
-    font-weight: normal;
 }
-
 
 .sliders {
     display: grid;
@@ -39,6 +36,8 @@
 }
 
 .search__options {
+    margin-top: 1.5rem;
+
     input[type="checkbox"] {
         margin: 0;
         padding: 0;
@@ -56,5 +55,13 @@
 
     input[type="checkbox"]:checked {
         background: $primary-color;
+    }
+
+    .checkbox {
+        display: inline-block;
+    }
+
+    .checkbox:first-of-type {
+        margin-right: 2rem;
     }
 }

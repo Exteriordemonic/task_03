@@ -1,7 +1,7 @@
 .ui-slider-handle {
     background: $primary-color;
     border-radius: 5rem;
-    // transform: translateY(2px);
+    transform: translateY(-2px);
 }
 
 .ui-slider-handle:focus {
@@ -10,7 +10,7 @@
 
 .ui-slider {
     background: #ccc;
-    height: 0.5rem;
+    height: 0.4rem;
 }
 
 .ui-slider-range {

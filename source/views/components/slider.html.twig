@@ -1,7 +1,7 @@
 <section class="section">
     <div class="container">
         {# <span class="side-line"></span> #}
-        <h2 class="search__title">Wybierz parametry wyszukiwania</h2>
+        <h2 class="search__title title">Wybierz parametry wyszukiwania</h2>
         <div class="sliders">
             <div class="slider-container" data-slider="powierzchnia" data-min="25" data-max="160" data-mindefault="25" data-maxdefault="120" data-step="1">
                 <label class="slider__label">Powierzchnia (m&sup2;)</label>
@@ -28,12 +28,19 @@
                 </div>
             </div>
         </div>
-
         <div class="search__options">
-            <input type="checkbox">
-            <label>Wolne <span>(24)</span></label>
-            <input type="checkbox">
-            <label>Promocja <span>(09)</span></label>
+            <div class="checkbox">
+                <input type="checkbox">
+                <label class="label">Wolne
+                    <span class="label--highlited">(24)</span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">
+                <label class="label">Promocja
+                    <span class="label--highlighted">(09)</span>
+                </label>
+            </div>
         </div>
     </div>
 </section>

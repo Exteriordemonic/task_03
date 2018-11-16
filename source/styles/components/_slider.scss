@@ -1,5 +1,5 @@
 .ui-slider-handle {
-    background: $gold;
+    background: $primary-color;
     border-radius: 5rem;
     // transform: translateY(2px);
 }
@@ -9,10 +9,10 @@
 }
 
 .ui-slider {
-    background: $gray2;
+    background: #ccc;
     height: 0.5rem;
 }
 
 .ui-slider-range {
-    background: $gold;
+    background: $primary-color;
 }

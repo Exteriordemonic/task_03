@@ -1,0 +1,20 @@
+<table class="search-results__table">
+    <thead>
+        <tr class="table__row">
+            <th data-sort="number">numer</th>
+            <th data-sort="area">powierzchnia</th>
+            <th data-sort="rooms">pokoje</th>
+            <th data-sort="floor">piętro</th>
+            <th data-sort="status">status</th>
+            <th data-sort="price">cena</th>
+            <th data-sorter="false">karta</th>
+            <th data-sorter="false">dodaj do koszyka</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for element in data %}
+            {% include './table-element.html.twig' with element %}
+        {% endfor %}
+    </tbody>
+
+</table>

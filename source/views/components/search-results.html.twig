@@ -1,0 +1,95 @@
+<section class="section search-results">
+    <div class="container search-results__title">
+        <h2 class="title">Wyniki wyszukiwania</h2>
+
+        {% include './table.html.twig' with {
+            data : [
+                {
+                    number: '1223',
+                    area: 25,
+                    rooms: 1,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 250000,
+                    discountPrice: 200000,
+                    discount: false
+                }, {
+                    number: '1223',
+                    area: 25,
+                    rooms: 1,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 240000,
+                    discountPrice: 200000,
+                    discount: false
+                }, {
+                    number: '1293',
+                    area: 27,
+                    rooms: 1,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 250000,
+                    discountPrice: 200000,
+                    discount: false
+                }, {
+                    number: '1423',
+                    area: 30,
+                    rooms: 2,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 210000,
+                    discountPrice: 210000,
+                    discount: false
+                }, {
+                    number: '1263',
+                    area: 45,
+                    rooms: 4,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 260000,
+                    discountPrice: 200000,
+                    discount: true
+                }, {
+                    number: '1273',
+                    area: 25,
+                    rooms: 2,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 220000,
+                    discountPrice: 200000,
+                    discount: true
+                }, {
+                    number: '1263',
+                    area: 55,
+                    rooms: 2,
+                    floor: 'parter',
+                    status: 'wolne',
+                    price: 250000,
+                    discountPrice: 300000,
+                    discount: false
+                }, {
+                    number: '1423',
+                    area: 25,
+                    rooms: 3,
+                    floor: 'parter',
+                    status: 'rezerwacja',
+                    price: 250000,
+                    discountPrice: 400000,
+                    discount: false
+                }, {
+                    number: '1223',
+                    area: 65,
+                    rooms: 2,
+                    floor: 'parter',
+                    status: 'rezerwacja',
+                    price: 250000,
+                    discountPrice: 200000,
+                    discount: false
+                }
+            ]
+        } %}
+    </div>
+    <div class="search-results__download">
+        <h3><i class="fas fa-download"></i>Pobierz standard techniczny</h3>
+    </div>
+</section>

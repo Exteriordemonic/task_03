@@ -1,0 +1,30 @@
+<tr data-table-element="data-table-element" data-number="{{element.number}}" data-area="{{element.area}}" data-rooms="{{element.rooms}}" data-floor="{{element.floor}}" data-status="{{element.status}}" data-price="{{element.price}}" data-discount="{{element.discount}}" data-discount-price="{{element.discountPrice}}" class="table__row">
+    <td data-label="number">{{element.number}}</td>
+    <td data-label="area">{{element.area}}
+        m&sup2;</td>
+    <td data-label="rooms">{{element.rooms}}</td>
+    <td data-label="floor">{{element.floor}}</td>
+    {% if element.status == 'wolne' %}
+        <td data-label="status">
+            <span class="td__status td__status--wolne">{{element.status}}</span>
+        </td>
+    {% else %}
+        <td data-label="status">
+            <span class="td__status td__status--rezerwacja">{{element.status}}</span>
+        </td>
+    {% endif %}
+
+    <td data-label="price">
+        {% if element.discount %}
+            <span class="td__price td__price--old">{{element.price}} zł</span><span class="td__price td__price--new td__price--discount">{{element.discountPrice}} zł</span>
+        {% else %}
+            <span class="td__price td__price--new">{{element.price}} zł</span>
+        {% endif %}
+    </td>
+    <td class="table__icon">
+        <a href=""><i class="fas fa-file"></i></a>
+    </td>
+    <td class="table__icon">
+        <a href=""><i class="fas fa-shopping-bag"></i></a>
+    </td>
+</tr>

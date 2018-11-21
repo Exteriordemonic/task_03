@@ -1,0 +1,92 @@
+.search-results {
+    background: $search-color;
+}
+
+.search-results__title {
+    color: $secondary-color;
+}
+
+.search-results__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+// [aria-sort="none"]:after {
+//     display: inline;
+//     position: absolute;
+//     content: 'a';
+// }
+
+.table__row {
+    font-weight: bold;
+    background: $search-color;
+
+    &:nth-of-type(odd){
+        background: $table-background-primary;
+    }
+
+    &:nth-of-type(even){
+        background: $table-background-secondary;
+    }   
+
+    th {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: black;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    th:focus {
+        outline: none;
+    }
+
+    td {
+        font-size: 0.8rem;
+        padding: 1rem;
+        outline: none;
+    }
+
+    
+}
+
+.search-results__download {
+    text-align: center;
+    color: $download-button-color;
+    margin-top: 3rem;
+}
+
+.td__status {
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: $download-button-color;
+    color: white;
+    padding: 0.5rem;
+}
+
+.td__status--wolne {
+    background: $green-color;
+}
+
+.td__price {
+    &--new {
+        color: black;
+    }
+
+    &--old {
+        text-decoration: line-through;
+        color: $download-button-color;
+        margin-right: 0.5rem;
+    }
+
+    &--discount {
+        color: red;
+    }
+}
+
+
+.search-results__download {
+    font-size: 0.8rem;
+}

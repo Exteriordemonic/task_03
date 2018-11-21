@@ -15,27 +15,36 @@ let config = {
 
 export class RangeSlider {
 
-    constructor(selector) {
+    constructor(selector, onChangeCallback) {
         this.selector = selector;
         this.$slider = $(selector + ' > .slider');
         this.$sliderContainer = $(selector);
+        this.onchange = onChangeCallback;
+        if (typeof onChangeCallback === 'undefined') { 
+            this.onchange = () => {}
+        }
         this.options = {
             min: this.$sliderContainer.data(config.DATA_MIN),
             max: this.$sliderContainer.data(config.DATA_MAX),
             mindefault: this.$sliderContainer.data(config.DATA_MINDEFAULT),
-            maxdefault:  this.$sliderContainer.data(config.DATA_MAXDEFAULT),
+            maxdefault: this.$sliderContainer.data(config.DATA_MAXDEFAULT),
             step: this.$sliderContainer.data(config.DATA_STEP)
         }
-
         this.init();
     }
 
-    getMinValue(){
+    getMinValue() {
         return this.$slider.slider('values', 0);
     }
 
-    getMaxValue(){
+    getMaxValue() {
         return this.$slider.slider('values', 1);
+    }
+
+    updateValues(ui){
+        this.$sliderContainer.find(config.VALUE_MIN).text(ui.values[0]);
+        this.$sliderContainer.find(config.VALUE_MAX).text(ui.values[1]);
+        this.onchange();
     }
 
     init() {
@@ -45,12 +54,14 @@ export class RangeSlider {
             max: this.options.max,
             values: [this.options.mindefault, this.options.maxdefault],
             step: this.options.step,
+            change: (event, ui) => {
+                this.updateValues(ui);
+            },
             slide: (event, ui) => {
-                this.$sliderContainer.find(config.VALUE_MIN).text(ui.values[0]);
-                this.$sliderContainer.find(config.VALUE_MAX).text(ui.values[1]);
+                this.updateValues(ui);
             }
         });
-        
+
         this.$sliderContainer.find(config.VALUE_MIN).text(this.$slider.slider("values", 0));
         this.$sliderContainer.find(config.VALUE_MAX).text(this.$slider.slider("values", 1));
     }

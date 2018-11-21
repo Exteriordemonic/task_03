@@ -46,6 +46,6 @@ function updateTable() {
         } else {
             $(e).show();
         }
-    })
+    });
 }
 
